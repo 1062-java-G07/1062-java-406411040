@@ -1,8 +1,9 @@
 
 public class Damage extends BeadPanel{
-	 public static void main(String[] args) {
-	        damage damege = new damage();
-	        son.getMoney();
-	        System.out.println("son.money="+son.money);
-	    }
+	public int damage(){
+	int hurt = 0;
+	Damage damage = new Damage();
+	hurt = damage.combo * 100;
+	return hurt;
+	}
 }
