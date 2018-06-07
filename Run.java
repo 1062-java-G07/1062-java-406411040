@@ -3,6 +3,9 @@ import javax.swing.*;
 import java.awt.BorderLayout;
 import java.awt.event.*;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
 
 public class Run extends JFrame{
 	
@@ -18,7 +21,7 @@ public class Run extends JFrame{
 		new RunTest();
 		}
 		});
-		f.setSize(300,300);
+		f.setSize(440,700);
 		f.show();
 		
       
