@@ -1,11 +1,10 @@
-package blood;
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 
-public class Life extends damage{
+public class Life extends Damage{
+	Damage life1 = new Life();
     private int x;
     private int y;
     private int width = 40;
@@ -37,7 +36,7 @@ public class Life extends damage{
     	Rectangle2D r2 = new Rectangle2D.Double(x,y-height,width,height);
     	g2.setColor(Color.YELLOW);
     	g2.draw(r2);
-    	Rectangle2D r = new Rectangle2D.Double(x+1,y-height+1,width*(damage/10000000),height-1);
+    	Rectangle2D r = new Rectangle2D.Double(x+1,y-height+1,width*(life1.hurt/10000000),height-1);
     	g2.setColor(Color.RED);
     	g2.draw(r);
     }
