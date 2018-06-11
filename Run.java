@@ -1,3 +1,5 @@
+package idgf;
+
 import javax.swing.*;
 
 import java.awt.BorderLayout;

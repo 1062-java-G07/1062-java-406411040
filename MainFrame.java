@@ -1,13 +1,16 @@
+package idgf;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 public class MainFrame extends JFrame implements ActionListener
 {
-	JPanel monsterp,lifep;
+	Mosterp mosterp;
+	JPanel lifep;
 	JPanel life;
 	BeadPanel beanp;
-	JButton button1,button2;
+	JButton button1;
 	
 	public MainFrame()
 	{
@@ -16,53 +19,49 @@ public class MainFrame extends JFrame implements ActionListener
 		int width = 440;
 		this.setSize(width,700);
 		
-		monsterp = new JPanel();
 		lifep = new JPanel();
 		life = new JPanel();
-		beanp = new BeadPanel();
-		button1 = new JButton("Eliminate");
+		button1 = new JButton("¤£­n«ö");
 		button1.addActionListener(this);
-		button2 = new JButton("Drop & Create");
-		button2.addActionListener(this);
+		beanp = new BeadPanel();
+		mosterp = new Mosterp();
 		
-		monsterp.setSize(width,250);
+		
+		
+		
+		
+		mosterp.setSize(width,220);
 		life.setSize(width,30);
-		//lifep.setSize(width,50);
-		button1.setSize(width/2,50);
-		button2.setSize(width/2,50);
+	
 		beanp.setSize(width,400);
-		monsterp.setBackground(Color.BLACK);
+		button1.setSize(width,50);
+		
+		
+		mosterp.setBackground(Color.BLACK);
 		life.setBackground(Color.RED);
-		//lifep.setBackground(Color.RED);
 		beanp.setBackground(Color.WHITE);
+		button1.setBackground(Color.WHITE);
 		
-		monsterp.setLocation(0,30);
+		mosterp.setLocation(0,30);
 		life.setLocation(0,0);
-		//lifep.setLocation(0,250);
-		button1.setLocation(0,250);
-		button2.setLocation(width/2,250);
-		beanp.setLocation(0,300);
 		
-		this.add(monsterp);
-		this.add(life);
-		//this.add(lifep);
+		beanp.setLocation(0,300);
+		button1.setLocation(0,350);
+		
 		this.add(button1);
-		this.add(button2);
+		this.add(mosterp);
+	
+		this.add(life);
+	
+		
 		this.add(beanp);
 		
+		
 	}
-	public void actionPerformed(ActionEvent e)
-    {
-        if(e.getSource()==button1)
-		{	
-			beanp.eliminate();	
-			//try { Thread.sleep(1000); }
-				//catch(InterruptedException ex) {;} 
-			beanp.dropCreate();
-		}
-		if(e.getSource()==button2)
-		{
-			beanp.dropCreate();
-		}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
